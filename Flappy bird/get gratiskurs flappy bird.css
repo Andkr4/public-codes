@@ -1,0 +1,146 @@
+body {
+        margin: 0;
+        background-color: lightgray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    #game {
+       width: 800px;
+        height: 800px;
+        position: relative;
+        background-color: lightgray;
+        overflow: hidden;
+    
+    }
+    #bird {
+    width: 100px;
+    height: 100px;
+    background: #ffcc99;
+    border: 3px solid #997755;
+
+    position: absolute;
+    left: 100px;
+    top: 200px;
+}
+
+.eye {
+    width: 16px;
+    height: 16px;
+    background: blue;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 25px;
+}
+
+.left {
+    left: 20px;
+}
+
+.right {
+    right: 20px;
+}
+
+.mouth {
+    width: 43px;
+    height: 25px;
+
+    border: 4px solid red;
+    border-top: none;
+
+    border-radius: 0 0 50px 50px;
+
+    position: absolute;
+    left: 25px;
+    top: 55px;
+}
+.moving-background {
+    position: absolute;
+    inset: 0;
+    background-image: url("../bilder/beachBackground.jpg");
+    background-repeat: repeat-x;
+    background-size: 1600px 800px;
+    background-position: 0 0;
+
+    animation: moveBackground 20s linear infinite;
+}
+@keyframes moveBackground {
+    from {
+        background-position-x: 0;
+    }
+    to {
+        background-position-x: -1600px;
+    }
+}
+
+.paused {
+    animation-play-state: paused;
+}
+
+.pipe-pair {
+    position: absolute;
+    width: 80px;
+    height: 800px;
+}
+
+.pipe {
+    position: absolute;
+    width: 80px;
+
+    background-color: green;
+    border: 4px solid darkgreen;
+    box-sizing: border-box;
+    
+}
+.top-pipe {
+    top: 0;
+    right: 0;
+}
+
+.bottom-pipe {
+    bottom: 0;
+    right: 0;
+}
+
+#scoreCount {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: 'Times New Roman', Times, serif ;
+    font-size: 30px;
+    
+}
+#highScoreCount {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    font-family: 'Times New Roman', Times, serif ;
+    font-size: 30px;
+}
+#howToStart {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 100px;
+    font-family: 'Times New Roman', Times, serif ;
+    font-size: 70px;
+    font-weight: normal;
+    color: black;
+    display: block;
+    text-align: center;
+}
+
+#howToRestart {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 100px;
+    font-family: 'Times New Roman', Times, serif ;
+    font-size: 70px;
+    font-weight: normal;
+    color: black;
+    display: none;
+    text-align: center;
+}
