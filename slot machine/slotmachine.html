@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="slotmachine.css">
+    </head>
+    <body>
+            <h1>Slotmachine</h1>
+            <div id="start-screen">
+                <p id="message-el">Want to play a round?</p>
+                <button id="start-btn" onclick="startGame()">START GAME</button>
+            </div>
+            
+            <div id="bet-screen">
+                <h2>Place your bet</h2>
+
+                <p id="current-bet">Current Bet: $0</p>
+                <p id="betting-credits">Your Credits: $200</p>
+
+                <div id="betting-area"></div>
+
+                <div id="chip-buttons">
+                    <button onclick="addBet(5)">$5</button>
+                    <button onclick="addBet(10)">$10</button>
+                    <button onclick="addBet(25)">$25</button>
+                    <button onclick="addBet(50)">$50</button>
+                    <button onclick="addBet(100)">$100</button>
+                </div>
+            
+                <button id="clear-bet" onclick="clearBet()">CLEAR BET</button>
+                <button id="place-bet" onclick="betPlaced()">PLACE BET</button>
+            </div>
+            <div id="game-screen">
+
+                <div id="slot-machine">
+
+                    <div class="reel-frame">
+
+                        <div class="reels">
+                            <div class="reel" id="reel-1">
+                                <div class="reel-strip">
+                                    <div class="reel-symbol">🍒</div>
+                                </div>
+                            </div>
+
+                            <div class="reel" id="reel-2">
+                                <div class="reel-strip">
+                                    <div class="reel-symbol">🍋</div>
+                                </div>
+                            </div>
+
+                            <div class="reel" id="reel-3">
+                                <div class="reel-strip">
+                                    <div class="reel-symbol">🎰</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="machine-bottom"></div>
+                        <div class="machine-display">
+                            <p id="message2-el"></p>
+                        </div>
+
+                        <div class="controls">
+                            <button id="spin-btn" onclick="spin()">SPIN</button>
+                            <button id="new-spin" onclick="newSpin()">SPIN AGAIN?</button>
+                            <button id="change-bet" onclick="changeBet()">CHANGE BET</button>
+                        </div>
+                
+                    <p id="player-el"></p>
+                    <p id="placed-bet"></p>
+                </div>
+            </div>
+            <div id="game-over-screen">
+                <h1>Game Over</h1>
+                <br>
+                <h1>You ran out of credits</h1>
+            </div>
+        <script src="slotmachine.js"></script>
+    </body>
+</html>

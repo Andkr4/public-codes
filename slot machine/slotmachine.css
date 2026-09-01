@@ -1,0 +1,163 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url("bilder/casino-table.png");
+    background-size: cover;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+h1 {
+    color: goldenrod;
+}
+
+#message-el {
+    font-style: italic;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    color: #016f32;
+    width: 100px;
+    background: goldenrod;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border:#016f32;
+    border-radius: 10px;
+}
+#chip-buttons {
+    display: inline-flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+#slot-machine {
+    width: max-content;
+    margin: 80px auto;
+
+    background: linear-gradient(
+        to right,
+        #8a0f0f,
+        #d82929,
+        #8a0f0f
+    );
+
+    border: 8px solid #4b0909;
+    border-radius: 35px 35px 20px 20px;
+
+    padding: 20px 25px 30px;
+
+    box-shadow:
+        0 12px 0 #350606,
+        0 20px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* REEL AREA */
+
+.reel-frame {
+    background: #171717;
+
+    border: 8px solid goldenrod;
+    border-radius: 15px;
+
+    padding: 14px;
+
+    box-shadow:
+        inset 0 0 15px black,
+        0 5px 0 #704700;
+}
+
+
+.reels {
+    display: flex;
+    gap: 8px;
+}
+
+
+.reel {
+    width: 100px;
+    height: 130px;
+
+    background: white;
+    border: 4px solid #555;
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+.reel-strip {
+    display: flex;
+    flex-direction: column;
+}
+
+.reel-symbol {
+    width: 100px;
+    height: 130px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 60px;
+}
+
+
+/* LOWER PANEL */
+
+
+.machine-display {
+    background: #160000;
+    color: #ffcc33;
+
+    border: 3px solid #333;
+    border-radius: 5px;
+
+    height: 55px;
+    padding: 0 20px;
+    margin-bottom: 12px;
+
+    font-family: monospace;
+    font-size: 40px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.controls button {
+    width: 150px;
+    height: 55px;
+
+    margin: 10px auto;
+
+    background: linear-gradient(
+        #ffe55d,
+        #e8a800
+    );
+
+    color: #671900;
+
+    border: 4px solid #754000;
+    border-radius: 14px;
+    
+    font-weight: bold;
+    
+    box-shadow: 0 6px 0 #623500;
+    
+    cursor: pointer;
+}
+.controls button:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #623500;
+}
+#spin-btn {
+    font-size: 22px;
+}
+#new-spin,
+#change-bet {
+    font-size: 15px;
+}
