@@ -1,0 +1,150 @@
+/* Complete the CSS styling according to the provided design */
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url("bilder/casino-table.png");
+    background-size: cover;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+h1 {
+    color: goldenrod;
+}
+
+#message-el {
+    font-style: italic;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    color: #016f32;
+    width: 100px;
+    background: goldenrod;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border:#016f32;
+    border-radius: 10px;
+}
+#chip-buttons {
+    display: inline-flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+#betting-area {
+    min-height: 60px;
+    margin: 15px auto;
+}
+
+.bet-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+    margin: 4px;
+
+    border: 3px dashed white;
+    border-radius: 50%;
+    font-weight: bold;
+}
+.bet-chip-5 {
+    background: red;
+}
+
+.bet-chip-10 {
+    background: blue;
+}
+
+.bet-chip-25 {
+    background: green;
+}
+
+.bet-chip-50 {
+    background: rgb(255, 115, 0);
+}
+
+.bet-chip-100 {
+    background: black;
+    color: white;
+}
+
+#cards-el,
+#dealer-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.playing-card {
+    width: 70px;
+    height: 100px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    position: relative;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.playing-card.red {
+    color: red;
+}
+
+.playing-card.black {
+    color: black;
+}
+
+.card-corner {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+    font-size: 16px;
+}
+
+.card-corner.top {
+    top: 6px;
+    left: 6px;
+}
+
+.card-corner.bottom {
+    bottom: 6px;
+    right: 6px;
+    transform: rotate(180deg);
+}
+
+.card-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 34px;
+}
+
+.card-back {
+    background-image: url("bilder/cardback.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#deck-pile {
+    margin: 20px auto;
+}
+
+.flying-card {
+    position: fixed;
+    z-index: 999;
+    margin: 0;
+    pointer-events: none;
+}
