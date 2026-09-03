@@ -22,7 +22,11 @@ const betButton = document.getElementById("place-bet")
 const clearBetBtn = document.getElementById("clear-bet")
 const changeBetBtn = document.getElementById("change-bet")
 const deckPile = document.getElementById("deck-pile")
-const suits = ["♠", "♥︎", "♦", "♣"]
+const SPADE = "\u2660"
+const HEART = "\u2665"
+const DIAMOND = "\u2666"
+const CLUB = "\u2663"
+const suits = [SPADE, HEART, DIAMOND, CLUB]
 const ranks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
 let deck = createDeck()
 shuffleDeck(deck)
@@ -203,7 +207,7 @@ function createCardElement(card) {
     const cardEl = document.createElement("div")
     cardEl.classList.add("playing-card")
 
-    if (card.suit === "♥︎" || card.suit === "♦") {
+    if (card.suit === "HEART" || card.suit === "DIAMOND") {
         cardEl.classList.add("red")
     } else {
         cardEl.classList.add("black")

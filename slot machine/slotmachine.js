@@ -18,17 +18,22 @@ const reel1 = document.getElementById("reel-1")
 const reel2 = document.getElementById("reel-2")
 const reel3 = document.getElementById("reel-3")
 
+const CHERRY = "\u{1F352}"
+const LEMON = "\u{1F34B}"
+const BELL = "\u{1F514}"
+const SLOT = "\u{1F3B0}"
+
 const symbols = [
-    {symbol: "🍒", weight: 40},
-    {symbol: "🍋", weight: 30},
-    {symbol: "🔔", weight: 20},
-    {symbol: "🎰", weight: 10}
+    {symbol: "CHERRY", weight: 40},
+    {symbol: "LEMON", weight: 30},
+    {symbol: "BELL", weight: 20},
+    {symbol: "SLOT", weight: 10}
 ]
 const payOutMultiplier = {
-    "🍒": 4,
-    "🍋": 8,
-    "🔔": 16,
-    "🎰": 32
+    "CHERRIES": 4,
+    "LEMON": 8,
+    "BELL": 16,
+    "SLOT": 32
 }
 
 let playerCredits = {credits:200}
