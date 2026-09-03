@@ -24,16 +24,16 @@ const BELL = "\u{1F514}"
 const SLOT = "\u{1F3B0}"
 
 const symbols = [
-    {symbol: "CHERRY", weight: 40},
-    {symbol: "LEMON", weight: 30},
-    {symbol: "BELL", weight: 20},
-    {symbol: "SLOT", weight: 10}
+    {symbol: CHERRY, weight: 40},
+    {symbol: LEMON, weight: 30},
+    {symbol: BELL, weight: 20},
+    {symbol: SLOT, weight: 10}
 ]
 const payOutMultiplier = {
-    "CHERRIES": 4,
-    "LEMON": 8,
-    "BELL": 16,
-    "SLOT": 32
+    [CHERRY]: 4,
+    [LEMON]: 8,
+    [BELL]: 16,
+    [SLOT]: 32
 }
 
 let playerCredits = {credits:200}
