@@ -30,10 +30,25 @@ const symbols = [
     {symbol: SLOT, weight: 10}
 ]
 const payOutMultiplier = {
-    [CHERRY]: 4,
-    [LEMON]: 8,
-    [BELL]: 16,
-    [SLOT]: 32
+    [CHERRY]: {
+        2: 1,
+        3: 4
+    },
+
+    [LEMON]: {
+        2: 2,
+        3: 8
+    },
+
+    [BELL]: {
+        2: 3,
+        3: 16
+    },
+
+    [SLOT]: {
+        2: 5,
+        3: 32
+    }
 }
 
 let playerCredits = {credits:200}
@@ -244,18 +259,30 @@ function animateReel(reel, finalSymbol, duration) {
     })
 }
 function checkWin(result) {
+
     if (
         result[0] === result[1] &&
         result[1] === result[2]
     ) {
-         return result[0]
+        return {
+            symbol: result[0],
+            matches: 3
+        }
     }
+
+    if (result[0] === result[1] || result[1] === result[2]) {
+        return {
+            symbol: result[0],
+            matches: 2
+        }
+    }
+
     return null
 }
 
 function payOut(winningSymbol) {
     if (winningSymbol !== null) {
-        const multiplier = payOutMultiplier[winningSymbol] // checks payOutMultiplier for which value winningSymbol has.
+        const multiplier = payOutMultiplier[winningSymbol.symbol][winningSymbol.matches] // checks payOutMultiplier for which value winningSymbol has.
         const winnings = currentBet * multiplier
         playerCredits.credits += winnings
         message = "WINNER"
