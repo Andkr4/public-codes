@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="slotmachine.css">
+        <link rel="stylesheet" href="slotmachine3x3.css">
     </head>
     <body>
             <h1>Slotmachine</h1>
@@ -39,18 +39,24 @@
                             <div class="reel" id="reel-1">
                                 <div class="reel-strip">
                                     <div class="reel-symbol">&#x1F352;</div>
+                                    <div class="reel-symbol">&#x1F34B;</div>
+                                    <div class="reel-symbol">&#x1F3B0;</div>
                                 </div>
                             </div>
 
                             <div class="reel" id="reel-2">
                                 <div class="reel-strip">
                                     <div class="reel-symbol">&#x1F34B;</div>
+                                    <div class="reel-symbol">&#x1F3B0;</div>
+                                    <div class="reel-symbol">&#x1F352;</div>
                                 </div>
                             </div>
 
                             <div class="reel" id="reel-3">
                                 <div class="reel-strip">
                                     <div class="reel-symbol">&#x1F3B0;</div>
+                                    <div class="reel-symbol">&#x1F352;</div>
+                                    <div class="reel-symbol">&#x1F34B;</div>
                                 </div>
                             </div>
                         </div>
@@ -72,28 +78,39 @@
 
                     <div class="paytable">
                         <div class="pay-row">
+                            <span class="pay-symbol">&#127818;</span>
+                            <span class="pay-value">x1</span>
+                        </div>
+                        <div class="pay-row">
                             <span class="pay-symbol">&#x1F352;</span>
-                            <span class="pay-value">x4</span>
+                            <span class="pay-value">x2</span>
                         </div>
                         <div class="pay-row">
                             <span class="pay-symbol">&#x1F34B;</span>
-                            <span class="pay-value">x8</span>
+                            <span class="pay-value">x4</span>
                         </div>
                         <div class="pay-row">
                             <span class="pay-symbol">&#x1F514;</span>
-                            <span class="pay-value">x16</span>
+                            <span class="pay-value">x8</span>
                         </div>
                         <div class="pay-row">
                             <span class="pay-symbol">&#x1F3B0;</span>
-                            <span class="pay-value">x32</span>
+                            <span class="pay-value">x16</span>
+                        </div>
+                        <div class="pay-row">
+                            <span>JACKPOT </span>
+                            <span class="pay-value">x100</span>
                         </div>
                     </div>
                     <a class="mode-button" href="slotmachine startpage.html">Back to selection page</a>
+                </div>
+            </div>
             <div id="game-over-screen">
                 <h1>Game Over</h1>
                 <br>
                 <h1>You ran out of credits</h1>
+                
             </div>
-        <script src="slotmachine.js"></script>
+        <script src="slotmachine3x3.js"></script>
     </body>
 </html>
